@@ -1,0 +1,63 @@
+# For Server
+server:
+  error:
+    whitelabel:
+      enabled: 'false'
+  port: 9090
+
+# To work with Database
+spring:
+  data:
+  
+  #For Mongo DB
+    mongodb:
+      database: testdb
+      host: localhost
+      port: 27017
+      
+  #For Postgres
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    name: org.springframework.jdbc.datasource.DriverManagerDataSource
+    password: root
+    url: jdbc:postgresql://localhost:5432/testdb1
+    username: postgres
+  
+  #For Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+#    show-sql: true
+    
+  #For View Resolver
+  mvc:
+    static-path-pattern: /static/**
+    throw-exception-if-no-handler-found: true
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  #For File Size From client
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 256MB
+      max-request-size: 256MB
+
+#For Actuator      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /admin/actuator
+  endpoint:
+    health:
+      show-details: always
+      

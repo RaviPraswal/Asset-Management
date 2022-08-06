@@ -1,0 +1,134 @@
+@charset "ISO-8859-1";
+* {
+	font-family: "Poppins", sans-serif;
+	
+}
+
+.fw-medium {
+	font-weight: 500;
+}
+
+.fw-semibold {
+	font-weight: 600;
+}
+
+.fw-bold {
+	font-weight: 700;
+}
+
+.text-black-primary {
+	color: #333;
+}
+
+.text-black-secondary {
+	color: #666;
+}
+
+.scale-up {
+	transform: scale(1.2);
+}
+
+/* .linear-gradient-body {
+	background-image: url('../static/img/background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+} */
+
+.locate-floor {
+	right: 0;
+	transform: translate(40%, 0%);
+}
+
+.with-fit-content {
+	width: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+	.scale-down {
+		width: 170%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.width-100-important {
+		width: 100% !important;
+	}
+	.scale-up {
+		transform: scale(1);
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.scale-down {
+		width: 200%;
+	}
+}
+
+/* Color Pallete */
+.gunmetal {
+	background-color: #2b2d42;
+}
+
+.cool-grey {
+	background-color: #8d99ae;
+}
+
+.anti-flash-white {
+	background-color: #f4efed;
+}
+
+.medium-candy-apple-red {
+	background-color: #d90429;
+}
+
+.text-gunmetal {
+	color: #2b2d42;
+}
+.flip-container {
+        -webkit-perspective: 1000;
+        background: transparent;
+        margin: 0px auto;
+    }
+    /* flip the picture when hover */
+    
+    .flip-container:hover .flipper,
+    .flip-container.hover .flipper {
+        -webkit-transform: rotateY(180deg);
+    }
+    
+    .flip-container,
+    .front,
+    .back,
+    img {
+        width: 350px;
+        height: 480px;
+    }
+    /* flip speed */
+    
+    .flipper {
+        -webkit-transition: 1.5s;
+        -webkit-transform-style: preserve-3d;
+        position: relative;
+    }
+    /* hide back  during flip */
+    
+    .front,
+    .back {
+        -webkit-backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    /* front placed above back */
+    
+    .front {
+        z-index: 2;
+    }
+    /* back, initially hidden */
+    
+    .back {
+        -webkit-transform: rotateY(180deg);
+	 background: rgb(64, 117, 220); 
+	   
+/* 	background: radial-gradient(ellipse at center, #0264d6 1%, #1c2b5a 100%);
+ */	}
